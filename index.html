@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Best Practices - Presentasi Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay">
+        <button id="prevBtn" class="nav-btn" disabled>&larr; Prev</button>
+        <span id="slideCounter">1 / 14</span>
+        <button id="nextBtn" class="nav-btn">Next &rarr;</button>
+    </div>
+    
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Slides Container -->
+    <div class="slides-container" id="slidesContainer">
+        
+        <!-- SECTION 1: INTRO & OBJECTIVES -->
+        
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <div class="content-center">
+                <h1 class="title">TYPOGRAPHY<br><span class="highlight">BEST PRACTICES</span></h1>
+                <p class="subtitle">Seni dan Aturan Tata Letak Teks di Era Digital</p>
+                <div class="author-info">
+                    <p>Proyek UTS Multimedia</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Objectives -->
+        <section class="slide" id="slide-2">
+            <div class="content">
+                <h2>Tujuan Pembelajaran</h2>
+                <div class="grid-2-col mt-large">
+                    <div class="card">
+                        <h3>Memahami Dasar</h3>
+                        <p>Mengerti prinsip dasar tipografi web yang baik untuk keterbacaan (readability) dan kejelasan (legibility).</p>
+                    </div>
+                    <div class="card">
+                        <h3>Implementasi Responsif</h3>
+                        <p>Mampu menerapkan ukuran dan jarak teks yang dinamis pada berbagai ukuran layar.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Hierarki Visual</h3>
+                        <p>Mengarahkan mata pengguna secara natural dari informasi terpenting hingga detail.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Aksesibilitas</h3>
+                        <p>Memastikan teks dapat dibaca oleh semua orang, termasuk mereka yang memiliki keterbatasan visual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MAIN CONTENT -->
+
+        <!-- Slide 3: Anatomy of Type -->
+        <section class="slide" id="slide-3">
+            <div class="content">
+                <h2>Anatomi Huruf Dasar</h2>
+                <div class="flex-row gap-large mt-large">
+                    <div class="text-block">
+                        <p>Memahami struktur huruf membantu kita memilih pasangan font yang tepat.</p>
+                        <ul class="styled-list">
+                            <li><strong>Baseline:</strong> Garis imajiner tempat huruf bersandar.</li>
+                            <li><strong>Cap Height:</strong> Tinggi huruf kapital.</li>
+                            <li><strong>X-Height:</strong> Tinggi huruf kecil (tanpa ascender/descender). Mempengaruhi keterbacaan pada ukuran kecil.</li>
+                            <li><strong>Ascender & Descender:</strong> Bagian huruf kecil yang memanjang ke atas (b, d, h) dan ke bawah (p, q, y).</li>
+                        </ul>
+                    </div>
+                    <div class="visual-box">
+                        <div class="typography-diagram">
+                            <span class="cap-height-line"></span>
+                            <span class="x-height-line"></span>
+                            <span class="baseline-line"></span>
+                            <span class="descender-line"></span>
+                            <div class="diagram-word">Typography</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Serif vs Sans-Serif -->
+        <section class="slide" id="slide-4">
+            <div class="content">
+                <h2>Serif vs Sans-Serif</h2>
+                <div class="grid-2-col mt-large">
+                    <div class="card">
+                        <div class="font-serif-A">A</div>
+                        <h3 class="font-serif">Serif (Memiliki "Kaki")</h3>
+                        <p class="font-serif-text">Contoh: Times New Roman, Georgia, Garamond.</p>
+                        <ul class="styled-list">
+                            <li>Kesan tradisional, formal, dan terpercaya.</li>
+                            <li>Sering digunakan untuk media cetak karena kaitnya membantu memandu mata sepanjang garis teks.</li>
+                            <li>Bagus untuk artikel panjang (long-form).</li>
+                        </ul>
+                    </div>
+                    <div class="card border-highlight">
+                        <div class="font-sans-A">A</div>
+                        <h3 class="font-sans">Sans-Serif (Tanpa "Kaki")</h3>
+                        <p class="font-sans-text">Contoh: Montserrat, Arial, Helvetica.</p>
+                        <ul class="styled-list">
+                            <li>Kesan modern, bersih, dan minimalis.</li>
+                            <li><strong>Standar industri web modern</strong> karena lebih mudah dibaca pada resolusi layar rendah.</li>
+                            <li>Ideal untuk UI, navigasi, dan body text web.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Font Pairing -->
+        <section class="slide" id="slide-5">
+            <div class="content">
+                <h2>Seni Memadukan Font (Pairing)</h2>
+                <p class="mt-small">Aturan utama: <strong>Kontras, bukan Konflik.</strong> Gunakan maksimal 2-3 jenis font dalam satu website.</p>
+                
+                <div class="grid-3-col mt-large">
+                    <div class="card pairing-card">
+                        <div class="pairing-demo type-1">
+                            <h3>Bebas Neue</h3>
+                            <p>Montserrat</p>
+                        </div>
+                        <p class="caption">Kontras Gaya (Presentasi ini)</p>
+                    </div>
+                    <div class="card pairing-card">
+                        <div class="pairing-demo type-2">
+                            <h3>Playfair Display</h3>
+                            <p>Lato</p>
+                        </div>
+                        <p class="caption">Serif Header + Sans-Serif Body</p>
+                    </div>
+                    <div class="card pairing-card">
+                        <div class="pairing-demo type-3">
+                            <h3>Roboto Bold</h3>
+                            <p>Roboto Light</p>
+                        </div>
+                        <p class="caption">Superfamily (Beda Weight)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Visual Hierarchy -->
+        <section class="slide" id="slide-6">
+            <div class="content">
+                <h2>Hierarki Visual</h2>
+                <p>Pandu mata pengguna membaca dari yang paling penting (Judul) hingga ke detail (Paragraf).</p>
+                
+                <div class="flex-row gap-large mt-large align-stretch">
+                    <div class="card box-bad">
+                        <div class="badge-bad">Buruk</div>
+                        <div class="hierarchy-demo-bad">
+                            <div>promo akhir tahun</div>
+                            <div>dapatkan diskon 50% untuk semua item</div>
+                            <div>promo berlaku hingga 31 desember. syarat dan ketentuan berlaku. klik disini untuk membeli.</div>
+                        </div>
+                    </div>
+                    <div class="card box-good">
+                        <div class="badge-good">Baik</div>
+                        <div class="hierarchy-demo-good">
+                            <h4 class="h-tag">PROMO AKHIR TAHUN</h4>
+                            <h2 class="h-title">Diskon 50% Semua Item</h2>
+                            <p class="h-body">Promo berlaku hingga 31 Desember. Syarat dan ketentuan berlaku.</p>
+                            <button class="h-btn">Beli Sekarang</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Slide 7: Interactive Demo - Line Height -->
+        <section class="slide interactive-slide" id="slide-7">
+            <div class="content">
+                <h2>INTERACTIVE: Spasi Baris (Line Height)</h2>
+                <p>Line height yang ideal (sekitar 1.4 - 1.6) krusial untuk mencegah mata lelah.</p>
+                
+                <div class="interactive-container mt-large">
+                    <div class="controls">
+                        <label for="lineHeightSlider">Line Height: <span id="lhValue">1.5</span></label>
+                        <input type="range" id="lineHeightSlider" min="1" max="2.5" step="0.1" value="1.5">
+                    </div>
+                    <div class="demo-box">
+                        <p id="demoTextLH" class="demo-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Line Length (Measure) -->
+        <section class="slide" id="slide-8">
+            <div class="content">
+                <h2>Panjang Baris (Line Length)</h2>
+                <p>Panjang baris yang optimal adalah <strong>45-75 karakter</strong> (termasuk spasi) per baris.</p>
+                
+                <div class="flex-column gap-small mt-large">
+                    <div class="measure-demo too-long">
+                        <span class="measure-label bad-label">Terlalu Panjang (> 90 char) - Susah melacak baris baru</span>
+                        <p>Jika teks terlalu panjang dari ujung ke ujung layar, mata pengguna akan kesulitan menemukan awal baris berikutnya saat membaca turun, menyebabkan kelelahan dan penurunan fokus yang signifikan pada artikel panjang.</p>
+                    </div>
+                    <div class="measure-demo too-short mt-small">
+                        <span class="measure-label bad-label">Terlalu Pendek (< 40 char) - Ritme rusak</span>
+                        <p>Jika teks terlalu<br>pendek, mata harus<br>bergerak kembali ke<br>kiri terlalu sering<br>sehingga merusak ritme.</p>
+                    </div>
+                    <div class="measure-demo just-right mt-small">
+                        <span class="measure-label good-label">Ideal (45-75 char) - Nyaman dibaca</span>
+                        <p>Panjang baris ini ideal. Mata dapat membaca dengan nyaman dan mudah menemukan awal baris berikutnya tanpa tersesat. Inilah sebabnya artikel sering ditaruh di tengah layar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Contrast & Color -->
+        <section class="slide" id="slide-9">
+            <div class="content">
+                <h2>Kontras & Warna Aksesibilitas</h2>
+                <p>Menurut standar WCAG, rasio kontras teks reguler dengan background minimal harus <strong>4.5:1</strong>.</p>
+                
+                <div class="grid-3-col mt-large text-center">
+                    <div class="contrast-box box-1">
+                        <p>Teks Abu di Putih</p>
+                        <span class="ratio bad-ratio">Rasio: 2.1:1 (FAIL)</span>
+                    </div>
+                    <div class="contrast-box box-2">
+                        <p>Teks Putih di Kuning</p>
+                        <span class="ratio bad-ratio">Rasio: 1.5:1 (FAIL)</span>
+                    </div>
+                    <div class="contrast-box box-3">
+                        <p>Teks Putih di Hitam</p>
+                        <span class="ratio good-ratio">Rasio: 21:1 (PASS)</span>
+                    </div>
+                </div>
+                <p class="mt-large text-center italic">Hindari #000000 murni di atas #FFFFFF murni. Gunakan dark grey (#333) untuk mengurangi ketegangan mata.</p>
+            </div>
+        </section>
+
+        <!-- Slide 10: Responsive Typography -->
+        <section class="slide" id="slide-10">
+            <div class="content">
+                <h2>Fluid & Responsive Typography</h2>
+                <p>Teks harus beradaptasi dengan ukuran layar (HP vs Desktop).</p>
+                
+                <div class="flex-row gap-large mt-large">
+                    <div class="code-block">
+                        <div class="code-header">CSS Modern (clamp)</div>
+                        <pre><code>
+h1 {
+  /* clamp(MIN, VAL, MAX) */
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+p {
+  /* Menggunakan relative units */
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+}
+                        </code></pre>
+                    </div>
+                    <div class="text-block">
+                        <h3>Tips Responsif:</h3>
+                        <ul class="styled-list">
+                            <li>Gunakan unit relatif (`rem`, `em`, `%`, `vw`) daripada unit absolut (`px`).</li>
+                            <li>Fungsi `clamp()` di CSS memungkinkan teks mengecil di HP tapi tidak lebih kecil dari batas minimum, dan membesar di desktop tapi tidak melewati batas maksimum.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Case Study 1 -->
+        <section class="slide" id="slide-11">
+            <div class="content">
+                <h2>Studi Kasus: Medium.com</h2>
+                <div class="grid-2-col mt-large">
+                    <div class="image-placeholder">
+                        <div class="mockup">
+                            <h2 class="mock-serif-title">The Art of Typography</h2>
+                            <p class="mock-serif-body">By John Doe &middot; 5 min read</p>
+                            <p class="mock-serif-text">Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed...</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Kenapa Tipografi Medium Sukses?</h3>
+                        <ul class="styled-list">
+                            <li><strong>Fokus Keterbacaan:</strong> Menggunakan font serif khusus (Charter) yang dioptimalkan untuk bacaan panjang di layar.</li>
+                            <li><strong>Max-width:</strong> Membatasi lebar teks artikel sekitar 680px (~75 karakter) agar mata tidak lelah.</li>
+                            <li><strong>White Space:</strong> Margin dan padding yang sangat lega (breathing room).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Interactive Quiz -->
+        <section class="slide interactive-slide" id="slide-12">
+            <div class="content">
+                <h2>Kuis Interaktif: Temukan Kesalahan</h2>
+                <p>Berdasarkan yang sudah kita pelajari, apa masalah utama dari desain teks di bawah ini?</p>
+                
+                <div class="quiz-container mt-large">
+                    <div class="bad-design-preview">
+                        <h2 style="font-family: 'Comic Sans MS', cursive; color: #ff0000; text-align: justify; line-height: 0.9;">PENGUMUMAN PENTING SEKALI</h2>
+                        <p style="font-size: 12px; color: #555; text-transform: uppercase; letter-spacing: -1px; text-align: justify;">ini adalah pengumuman sangat penting yang harus dibaca oleh semua orang. tolong perhatikan baik-baik instruksi berikut ini karena sangat krusial untuk keamanan kita bersama. jika ada pertanyaan segera hubungi admin terkait secepatnya.</p>
+                    </div>
+                    
+                    <div class="quiz-options mt-large" id="quizOptions">
+                        <button class="quiz-btn" data-correct="false">Warna background terlalu terang</button>
+                        <button class="quiz-btn" data-correct="true">Font konfliktif, Line-height terlalu rapat, All-caps panjang, Kontras buruk</button>
+                        <button class="quiz-btn" data-correct="false">Ukuran font judul terlalu besar</button>
+                    </div>
+                    <div id="quizResult" class="quiz-result hidden">
+                        <span class="icon">✅</span> Benar! All-caps (huruf besar semua) untuk paragraf panjang sangat sulit dibaca. Line-height yang rapat membuat teks bertabrakan, dan kontras warna merah pada abu-abu menyakitkan mata.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CONCLUSION & RESOURCES -->
+
+        <!-- Slide 13: Conclusion -->
+        <section class="slide" id="slide-13">
+            <div class="content">
+                <h2>Kesimpulan</h2>
+                <div class="conclusion-box mt-large">
+                    <p class="lead">Tipografi yang baik tidak boleh diperhatikan (Invisible).</p>
+                    <p>Jika pembaca menyadari font Anda sebelum pesannya, berarti tipografi Anda gagal. Tujuan utama tipografi di web adalah komunikasi yang efektif dan tanpa hambatan.</p>
+                    
+                    <div class="grid-2-col mt-large align-stretch">
+                        <div class="card check-list">
+                            <h3>Do's (Lakukan)</h3>
+                            <ul>
+                                <li>Batasi font maksimal 2 family</li>
+                                <li>Gunakan Line-Height 1.4 - 1.6</li>
+                                <li>Batasi Line-Length 45-75 karakter</li>
+                                <li>Buat Hierarki (Judul > Subjudul > Teks)</li>
+                            </ul>
+                        </div>
+                        <div class="card cross-list">
+                            <h3>Don'ts (Hindari)</h3>
+                            <ul>
+                                <li>Menggunakan teks Justify di web</li>
+                                <li>All-caps untuk paragraf panjang</li>
+                                <li>Teks terlalu kecil (< 16px)</li>
+                                <li>Kontras warna yang rendah</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 14: Resources -->
+        <section class="slide" id="slide-14">
+            <div class="content">
+                <h2>Referensi & Resources</h2>
+                <div class="grid-2-col mt-large">
+                    <div class="card">
+                        <h3>Referensi Materi</h3>
+                        <ul class="resource-list">
+                            <li>WCAG Web Content Accessibility Guidelines. "Contrast (Minimum)".</li>
+                            <li>Butterick, Matthew. "Butterick's Practical Typography".</li>
+                            <li>Bringhurst, Robert. "The Elements of Typographic Style".</li>
+                            <li>Google Fonts Knowledge. "Readability and legibility".</li>
+                            <li>Mozilla Developer Network (MDN). "Fundamental text and font styling".</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Tools Berguna</h3>
+                        <ul class="resource-list">
+                            <li><strong>Google Fonts:</strong> Direktori font gratis.</li>
+                            <li><strong>Fontjoy.com:</strong> AI font pairing generator.</li>
+                            <li><strong>Typescale.com:</strong> Visual visual hierarchy calculator.</li>
+                            <li><strong>Coolors.co:</strong> Contrast checker untuk warna.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-large">
+                    <h3 class="highlight">Terima Kasih!</h3>
+                    <p>Tekan ESC untuk mengakhiri presentasi.</p>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

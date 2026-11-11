@@ -68,22 +68,62 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNav();
 
 
-    // ===== INTERACTIVE 1: LINE HEIGHT SLIDER =====
+    // ===== INTERACTIVE 1: LINE HEIGHT & LETTER SPACING SLIDERS =====
     const lhSlider = document.getElementById('lineHeightSlider');
     const lhValue = document.getElementById('lhValue');
+    const lsSlider = document.getElementById('letterSpacingSlider');
+    const lsValue = document.getElementById('lsValue');
     const demoTextLH = document.getElementById('demoTextLH');
 
-    if(lhSlider) {
+    if (lhSlider) {
         lhSlider.addEventListener('input', (e) => {
             const val = e.target.value;
             lhValue.textContent = val;
             demoTextLH.style.lineHeight = val;
             
-            // Visual feedback
-            if(val < 1.3 || val > 1.8) {
-                lhValue.style.color = '#E74C3C'; // Red if bad
+            if (val < 1.3 || val > 1.8) {
+                lhValue.style.color = '#E74C3C'; // Merah jika kurang ideal
             } else {
-                lhValue.style.color = '#2ECC71'; // Green if ideal (1.4 - 1.6)
+                lhValue.style.color = '#2ECC71'; // Hijau jika ideal (1.4 - 1.6)
+            }
+        });
+    }
+
+    if (lsSlider) {
+        lsSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            lsValue.textContent = `${val}px`;
+            demoTextLH.style.letterSpacing = `${val}px`;
+            
+            if (val < 0 || val > 3) {
+                lsValue.style.color = '#E74C3C';
+            } else {
+                lsValue.style.color = '#2ECC71';
+            }
+        });
+    }
+
+    // ===== INTERACTIVE 2: LINE LENGTH SLIDER =====
+    const llSlider = document.getElementById('lineLengthSlider');
+    const llValue = document.getElementById('llValue');
+    const llStatus = document.getElementById('llStatus');
+    const lineLengthBox = document.getElementById('lineLengthBox');
+
+    if (llSlider) {
+        llSlider.addEventListener('input', (e) => {
+            const width = e.target.value;
+            llValue.textContent = `${width}px`;
+            lineLengthBox.style.maxWidth = `${width}px`;
+
+            if (width < 400) {
+                llStatus.textContent = 'Terlalu Pendek (< 40 Karakter)';
+                llStatus.className = 'status-badge status-short';
+            } else if (width > 750) {
+                llStatus.textContent = 'Terlalu Panjang (> 80 Karakter)';
+                llStatus.className = 'status-badge status-long';
+            } else {
+                llStatus.textContent = 'Ideal (45-75 Karakter)';
+                llStatus.className = 'status-badge status-ideal';
             }
         });
     }

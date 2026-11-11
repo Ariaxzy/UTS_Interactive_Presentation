@@ -182,44 +182,49 @@
             </div>
         </section>
         
-        <!-- Slide 7: Interactive Demo - Line Height -->
+        <!-- Slide 7: Interactive Demo - Line Height & Letter Spacing -->
         <section class="slide interactive-slide" id="slide-7">
             <div class="content">
-                <h2>INTERACTIVE: Spasi Baris (Line Height)</h2>
-                <p>Line height yang ideal (sekitar 1.4 - 1.6) krusial untuk mencegah mata lelah.</p>
+                <h2>INTERACTIVE: Spasi Baris & Antar Huruf</h2>
+                <p>Eksplorasi pengaruh Line Height (spasi baris) dan Letter Spacing (jarak antar huruf) terhadap keterbacaan.</p>
                 
                 <div class="interactive-container mt-large">
-                    <div class="controls">
-                        <label for="lineHeightSlider">Line Height: <span id="lhValue">1.5</span></label>
-                        <input type="range" id="lineHeightSlider" min="1" max="2.5" step="0.1" value="1.5">
+                    <div class="controls-grid">
+                        <div class="control-group">
+                            <label for="lineHeightSlider">Line Height: <span id="lhValue">1.5</span></label>
+                            <input type="range" id="lineHeightSlider" min="1" max="2.5" step="0.1" value="1.5">
+                        </div>
+                        <div class="control-group">
+                            <label for="letterSpacingSlider">Letter Spacing: <span id="lsValue">0px</span></label>
+                            <input type="range" id="letterSpacingSlider" min="-2" max="6" step="0.5" value="0">
+                        </div>
                     </div>
-                    <div class="demo-box">
+                    <div class="demo-box mt-small">
                         <p id="demoTextLH" class="demo-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Slide 8: Line Length (Measure) -->
-        <section class="slide" id="slide-8">
+        <!-- Slide 8: Interactive Line Length (Measure) -->
+        <section class="slide interactive-slide" id="slide-8">
             <div class="content">
-                <h2>Panjang Baris (Line Length)</h2>
-                <p>Panjang baris yang optimal adalah <strong>45-75 karakter</strong> (termasuk spasi) per baris.</p>
+                <h2>INTERACTIVE: Panjang Baris (Line Length)</h2>
+                <p>Panjang baris yang ideal adalah <strong>45-75 karakter</strong>. Geser slider di bawah untuk mengatur lebar area membaca:</p>
                 
-                <div class="flex-column gap-small mt-large">
-                    <div class="measure-demo too-long">
-                        <span class="measure-label bad-label">Terlalu Panjang (> 90 char) - Susah melacak baris baru</span>
-                        <p>Jika teks terlalu panjang dari ujung ke ujung layar, mata pengguna akan kesulitan menemukan awal baris berikutnya saat membaca turun, menyebabkan kelelahan dan penurunan fokus yang signifikan pada artikel panjang.</p>
+                <div class="interactive-container mt-large">
+                    <div class="controls">
+                        <label for="lineLengthSlider">Lebar Box: <span id="llValue">600px</span> (<span id="llStatus" class="status-badge status-ideal">Ideal (45-75 Karakter)</span>)</label>
+                        <input type="range" id="lineLengthSlider" min="250" max="950" step="10" value="600">
                     </div>
-                    <div class="measure-demo too-short mt-small">
-                        <span class="measure-label bad-label">Terlalu Pendek (< 40 char) - Ritme rusak</span>
-                        <p>Jika teks terlalu<br>pendek, mata harus<br>bergerak kembali ke<br>kiri terlalu sering<br>sehingga merusak ritme.</p>
-                    </div>
-                    <div class="measure-demo just-right mt-small">
-                        <span class="measure-label good-label">Ideal (45-75 char) - Nyaman dibaca</span>
-                        <p>Panjang baris ini ideal. Mata dapat membaca dengan nyaman dan mudah menemukan awal baris berikutnya tanpa tersesat. Inilah sebabnya artikel sering ditaruh di tengah layar.</p>
+                    <div class="demo-box text-center mt-small">
+                        <div id="lineLengthBox" class="measure-interactive-box">
+                            <p id="demoTextLL">
+                                Panjang baris ini menyesuaikan secara dinamis saat slider digeser. Jika teks terlalu panjang, mata pembaca akan lelah melacak baris berikutnya saat membaca turun. Jika terlalu pendek, ritme membaca akan terganggu karena mata terlalu sering melompat ke baris baru.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
